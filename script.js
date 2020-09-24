@@ -25,7 +25,7 @@ units.map((unit) => {
     
     const paragraphStamina = document.createElement('p');
     paragraphStamina.textContent = `Stamina: ${unit.stamina}`; 
-    paragraphStamina.setAttribute('class', 'para');
+    paragraphStamina.setAttribute('class', 'para stamina');
     paragraphStamina.style.backgroundColor = 'orange';
     div.appendChild(paragraphStamina);
     
@@ -37,10 +37,8 @@ units.map((unit) => {
     const image = document.createElement('img');
     image.setAttribute('src', unit.image);
     image.setAttribute('alt', 'warrior');
-    image.style.width = '110px';
+    image.style.width = '105px';
     image.style.height = '150px';
-    image.style.border = '5px solid aqua';   
+    image.style.border = '5px solid #9400D3';   
     div.appendChild(image);
 })
-
-
