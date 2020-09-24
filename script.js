@@ -25,7 +25,7 @@ units.map((unit) => {
     
     const paragraphStamina = document.createElement('p');
     paragraphStamina.textContent = `Stamina: ${unit.stamina}`; 
-    paragraphStamina.setAttribute('class', 'para stamina');
+    paragraphStamina.setAttribute('class', 'para');
     paragraphStamina.style.backgroundColor = 'orange';
     div.appendChild(paragraphStamina);
     

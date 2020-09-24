@@ -4,36 +4,26 @@ function changeHealth(event) {
     const healthString = paragraphHealth.innerText.replace("Health: ", '')
     if (+healthString > 0) {
         paragraphHealth.textContent = `Health: ${+healthString - 20}`;
-        
-    } else {
-        paragraphHealth.setAttribute("class", "disabled");
-    }
+        console.log(paragraphHealth.textContent);
+    }  
 }
-
-const healthBars = document.querySelectorAll('p');
-
-healthBars.forEach((bar) => {
-    bar.addEventListener('click', changeHealth);
-})
-
-
-
-
-
 
 function changeStamina(event) {
     const paragraphStamina = this;
     const staminaString = paragraphStamina.innerText.replace("Stamina: ", '')
     if (+staminaString > 0) {
         paragraphStamina.textContent = `Stamina: ${+staminaString - 20}`;
-        
-    } else {
-        paragraphStamina.setAttribute("class", "disabled");
-    }
+        console.log(paragraphStamina.textContent);
+    } 
 }
 
-const staminaBars = document.querySelectorAll('p');
+const bars = document.querySelectorAll('p');
 
-staminaBars.forEach((bar) => {
+bars.forEach((bar) => {
+    bar.addEventListener('click', changeHealth);
+    console.log(changeStamina);
+})
+
+bars.forEach((bar) => {
     bar.addEventListener('click', changeStamina);
 })
